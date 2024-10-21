@@ -1,0 +1,25 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python-related
+*.pyc
+__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# SQLite database file
+database/*.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# macOS-specific
+.DS_Store
+
+# Other unnecessary files
+*.pkl
+Project_Overview.txt
+
