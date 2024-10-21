@@ -35,7 +35,7 @@ credit-card-fraud-detection/
 
 ### Folders and Files
 
-- **data/**: Contains the original CSV dataset.
+- **data/**: Contains the original CSV dataset (can be downloaded from "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud").
 - **database/**: Contains the SQLite database used for storing the dataset.
 - **src/**: All source code files.
   - `save_to_sql.py`: Saves the CSV file into an SQLite database.
