@@ -40,6 +40,39 @@ def explore_data(df):
     plt.savefig(os.path.join(results_dir, 'class_distribution.png'))
     plt.close()
 
+    # Amount distribution plot
+    plt.figure(figsize=(8, 6))
+    sns.histplot(df['Amount'], bins=50, kde=True)
+    plt.title('Amount Distribution')
+    plt.xlabel('Amount')
+    plt.ylabel('Frequency')
+    plt.savefig(os.path.join(results_dir, 'amount_distribution.png'))
+    plt.close()
+
+    # Time distribution plot
+    plt.figure(figsize=(8, 6))
+    sns.histplot(df['Time'], bins=50, kde=True)
+    plt.title('Time Distribution')
+    plt.xlabel('Time')
+    plt.ylabel('Frequency')
+    plt.savefig(os.path.join(results_dir, 'time_distribution.png'))
+    plt.close()
+
+    # Correlation heatmap
+    plt.figure(figsize=(12, 10))
+    corr = df.corr()
+    sns.heatmap(corr, cmap='coolwarm', annot=False)
+    plt.title('Correlation Heatmap')
+    plt.savefig(os.path.join(results_dir, 'correlation_heatmap.png'))
+    plt.close()
+
+    # Amount by Class boxplot
+    plt.figure(figsize=(8, 6))
+    sns.boxplot(x='Class', y='Amount', data=df)
+    plt.title('Amount by Class Boxplot')
+    plt.savefig(os.path.join(results_dir, 'amount_by_class_boxplot.png'))
+    plt.close()
+
 if __name__ == '__main__':
     df = load_data()
     explore_data(df)
